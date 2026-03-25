@@ -12,16 +12,15 @@ npm run dev
 
 ## Netlify 배포
 
-이 프로젝트는 Netlify의 최신 Next.js 지원(OpenNext adapter) 기준으로 배포합니다.
+이 프로젝트는 Next.js 공식 static export 방식으로 `out` 디렉터리를 생성해 배포합니다.
 
 - `Base directory`: 비워두기
 - `Build command`: `npm run build`
-- `Publish directory`: 비워두기
-- `Framework preset`: `Next.js`
+- `Publish directory`: `out`
 
 중요:
 
-- `Publish directory`에 `.next`를 넣지 않습니다.
+- `next.config.ts`에서 `output: "export"`를 사용합니다.
 - GitHub 연동 배포를 사용합니다.
 - 설정 변경 후 `Clear cache and deploy site`로 다시 배포하는 것이 안전합니다.
 
@@ -29,4 +28,5 @@ npm run dev
 
 - Next.js `create-next-app`: https://nextjs.org/docs/app/api-reference/cli/create-next-app
 - Next.js deployment: https://nextjs.org/docs/app/building-your-application/deploying
+- Next.js static export: https://nextjs.org/docs/app/building-your-application/deploying/static-exports
 - Netlify Next.js overview: https://docs.netlify.com/frameworks/next-js/overview/
