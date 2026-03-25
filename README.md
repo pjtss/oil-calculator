@@ -30,3 +30,13 @@ npm run dev
 - Next.js deployment: https://nextjs.org/docs/app/building-your-application/deploying
 - Next.js static export: https://nextjs.org/docs/app/building-your-application/deploying/static-exports
 - Netlify Next.js overview: https://docs.netlify.com/frameworks/next-js/overview/
+
+## SEO 및 광고 설정
+
+다음 환경 변수를 Netlify에 설정하면 메타데이터와 광고 코드가 함께 반영됩니다.
+
+- `NEXT_PUBLIC_SITE_URL=https://your-domain.com`
+- `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=...`
+- `NEXT_PUBLIC_GOOGLE_ADSENSE_ID=ca-pub-xxxxxxxxxxxxxxxx`
+
+`public/ads.txt.example`은 AdSense용 샘플 파일입니다. 실제 AdSense publisher ID를 받은 뒤 `public/ads.txt`로 복사해서 사용해야 합니다.
