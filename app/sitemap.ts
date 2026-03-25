@@ -4,7 +4,7 @@ import { getAbsoluteUrl } from "@/lib/site";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["/", "/guide", "/about", "/privacy", "/contact"];
+  const routes = ["/", "/guide", "/about", "/ads", "/terms", "/privacy", "/contact"];
 
   return routes.map((route) => ({
     url: getAbsoluteUrl(route),

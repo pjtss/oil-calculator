@@ -18,6 +18,8 @@ export default function ContactPage() {
         <Link href="/">계산기</Link>
         <Link href="/guide">이용 가이드</Link>
         <Link href="/about">서비스 소개</Link>
+        <Link href="/ads">광고 안내</Link>
+        <Link href="/terms">이용약관</Link>
         <Link href="/privacy">개인정보 처리방침</Link>
         <Link href="/contact">문의</Link>
       </nav>
@@ -57,6 +59,8 @@ export default function ContactPage() {
           <Link href="/">계산기</Link>
           <Link href="/guide">이용 가이드</Link>
           <Link href="/about">서비스 소개</Link>
+          <Link href="/ads">광고 안내</Link>
+          <Link href="/terms">이용약관</Link>
           <Link href="/privacy">개인정보 처리방침</Link>
         </div>
       </footer>

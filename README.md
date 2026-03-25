@@ -40,3 +40,10 @@ npm run dev
 - `NEXT_PUBLIC_GOOGLE_ADSENSE_ID=ca-pub-xxxxxxxxxxxxxxxx`
 
 `public/ads.txt.example`은 AdSense용 샘플 파일입니다. 실제 AdSense publisher ID를 받은 뒤 `public/ads.txt`로 복사해서 사용해야 합니다.
+
+Google AdSense 게시 전 체크:
+
+- AdSense `Sites`에 실제 도메인 추가
+- 사이트 상태가 `Ready`인지 확인
+- `ads.txt`에 실제 publisher ID 반영
+- 정책 페이지(`/privacy`, `/terms`, `/ads`) 배포 확인
