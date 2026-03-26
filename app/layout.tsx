@@ -5,6 +5,7 @@ import { getSiteUrl, siteConfig } from "@/lib/site";
 
 const siteUrl = getSiteUrl();
 const adsenseClient = process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID;
+const adsenseAccount = process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ACCOUNT;
 const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 
 export const metadata: Metadata = {
@@ -24,6 +25,11 @@ export const metadata: Metadata = {
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
+  other: adsenseAccount
+    ? {
+        "google-adsense-account": adsenseAccount,
+      }
+    : undefined,
   robots: {
     index: true,
     follow: true,
