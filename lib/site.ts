@@ -1,8 +1,8 @@
-const DEFAULT_LOCAL_URL = "http://localhost:3000";
+const DEFAULT_SITE_URL = "https://oil-calculator.netlify.app";
 
 function normalizeSiteUrl(value?: string) {
   if (!value) {
-    return DEFAULT_LOCAL_URL;
+    return DEFAULT_SITE_URL;
   }
 
   if (value.startsWith("http://") || value.startsWith("https://")) {
@@ -39,5 +39,4 @@ export const siteConfig = {
     "통행료 계산",
     "여행 경비 계산기",
   ],
-  githubUrl: "https://github.com/pjtss/oil-calculator",
 };

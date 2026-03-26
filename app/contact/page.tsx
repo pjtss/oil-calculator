@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import styles from "../content-page.module.css";
-import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "문의",
-  description: "유류비 계산기 사이트 문의 및 피드백 접수 안내입니다.",
+  description: "사이트 운영 안내와 공통 정보 확인 방법을 안내합니다.",
   alternates: {
     canonical: "/contact",
   },
@@ -26,35 +25,25 @@ export default function ContactPage() {
 
       <article className={styles.article}>
         <p className={styles.eyebrow}>Contact</p>
-        <h1>문의 및 피드백</h1>
+        <h1>문의 안내</h1>
         <p className={styles.lead}>
-          계산 로직 오류, 기능 개선 요청, 제휴 문의 등은 아래 GitHub 저장소 이슈를
-          통해 전달할 수 있습니다.
+          현재 사이트는 별도 운영자 연락 수단이나 외부 저장소 주소를 공개하지 않습니다.
         </p>
 
         <section className={styles.section}>
-          <h2>문의 채널</h2>
+          <h2>안내</h2>
           <p>
-            저장소:{" "}
-            <a href={siteConfig.githubUrl} target="_blank" rel="noopener noreferrer">
-              {siteConfig.githubUrl}
-            </a>
+            사용 방법, 광고 안내, 개인정보 처리방침, 이용약관 등 공통 정보는 각
+            페이지에서 확인할 수 있습니다.
           </p>
           <p>
-            이슈 등록:{" "}
-            <a
-              href={`${siteConfig.githubUrl}/issues`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {siteConfig.githubUrl}/issues
-            </a>
+            사이트 구성이나 운영 방침이 변경되면 관련 안내 문서가 함께 업데이트됩니다.
           </p>
         </section>
       </article>
 
       <footer className={styles.footer}>
-        <p>검색 품질과 광고 심사 측면에서도 실제 문의 채널을 제공하는 것이 유리합니다.</p>
+        <p>연락 채널 없이도 필요한 운영 정보는 공통 문서에서 확인할 수 있습니다.</p>
         <div className={styles.footerLinks}>
           <Link href="/">계산기</Link>
           <Link href="/guide">이용 가이드</Link>
