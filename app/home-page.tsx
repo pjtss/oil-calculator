@@ -165,17 +165,18 @@ export default function HomePage() {
           </div>
 
           <div className={styles.actions}>
-            <button className={styles.primaryButton} type="button">
-              계산 중
-            </button>
             <button
               className={styles.secondaryButton}
               type="button"
               onClick={() => setForm(defaultValues)}
             >
-              초기화
+              기본값으로 초기화
             </button>
           </div>
+
+          <p className={styles.autoCalcNote}>
+            입력값을 바꾸면 결과가 자동으로 다시 계산됩니다.
+          </p>
 
           <div className={styles.copyBlock}>
             <h3>계산식</h3>
@@ -248,6 +249,15 @@ export default function HomePage() {
             수 있습니다. 여기에 통행료와 탑승 인원을 추가하면 총 이동 비용과
             1인당 분담 금액까지 바로 산출됩니다.
           </p>
+        </div>
+
+        <div className={styles.infoCard}>
+          <h2>이 계산기가 특히 유용한 상황</h2>
+          <ul className={styles.list}>
+            <li>주말 여행 전에 차량별 예상 기름값을 비교할 때</li>
+            <li>출퇴근 경로 변경 전 월간 교통비를 가늠할 때</li>
+            <li>카풀이나 렌터카 동승 비용을 공정하게 나눌 때</li>
+          </ul>
         </div>
       </section>
 

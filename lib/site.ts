@@ -39,4 +39,7 @@ export const siteConfig = {
     "통행료 계산",
     "여행 경비 계산기",
   ],
+  contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL,
+  contactName:
+    process.env.NEXT_PUBLIC_CONTACT_NAME || "유류비 계산기 운영팀",
 };

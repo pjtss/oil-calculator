@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import styles from "../content-page.module.css";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "문의",
@@ -11,6 +12,8 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  const hasContactEmail = Boolean(siteConfig.contactEmail);
+
   return (
     <main className={styles.page}>
       <nav className={styles.nav} aria-label="주요 메뉴">
@@ -27,23 +30,58 @@ export default function ContactPage() {
         <p className={styles.eyebrow}>Contact</p>
         <h1>문의 안내</h1>
         <p className={styles.lead}>
-          현재 사이트는 별도 운영자 연락 수단이나 외부 저장소 주소를 공개하지 않습니다.
+          사이트 이용 중 오류 제보, 정책 문의, 광고 관련 확인이 필요하면 아래 안내를
+          참고해 주세요.
         </p>
 
         <section className={styles.section}>
-          <h2>안내</h2>
+          <h2>연락 방법</h2>
+          {hasContactEmail ? (
+            <>
+              <p>
+                이메일:{" "}
+                <a href={`mailto:${siteConfig.contactEmail}`}>
+                  {siteConfig.contactEmail}
+                </a>
+              </p>
+              <p>
+                운영자 표기명: {siteConfig.contactName}
+              </p>
+            </>
+          ) : (
+            <>
+              <p>
+                현재 공개된 직접 문의 이메일은 설정되어 있지 않습니다.
+              </p>
+              <p>
+                실제 문의 채널을 운영할 경우 `NEXT_PUBLIC_CONTACT_EMAIL` 환경변수를
+                설정하면 이 페이지에 즉시 반영됩니다.
+              </p>
+            </>
+          )}
+        </section>
+
+        <section className={styles.section}>
+          <h2>문의 전에 확인하면 좋은 페이지</h2>
+          <ul>
+            <li>계산 방법과 공식 설명: 이용 가이드</li>
+            <li>광고 운영 원칙: 광고 안내</li>
+            <li>데이터 처리 기준: 개인정보 처리방침</li>
+            <li>서비스 성격과 면책 범위: 이용약관</li>
+          </ul>
+        </section>
+
+        <section className={styles.section}>
+          <h2>응답 범위</h2>
           <p>
-            사용 방법, 광고 안내, 개인정보 처리방침, 이용약관 등 공통 정보는 각
-            페이지에서 확인할 수 있습니다.
-          </p>
-          <p>
-            사이트 구성이나 운영 방침이 변경되면 관련 안내 문서가 함께 업데이트됩니다.
+            유류비 계산 로직 오류, 페이지 오탈자, 정책 문서 정정, 광고 배치 관련
+            문의를 우선 대상으로 합니다.
           </p>
         </section>
       </article>
 
       <footer className={styles.footer}>
-        <p>연락 채널 없이도 필요한 운영 정보는 공통 문서에서 확인할 수 있습니다.</p>
+        <p>문의 채널과 정책 문서를 분리해 사용자와 심사자가 정보를 쉽게 확인할 수 있게 구성했습니다.</p>
         <div className={styles.footerLinks}>
           <Link href="/">계산기</Link>
           <Link href="/guide">이용 가이드</Link>

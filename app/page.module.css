@@ -124,9 +124,7 @@
   margin-top: 20px;
 }
 
-.primaryButton,
 .secondaryButton {
-  flex: 1;
   min-height: 52px;
   border: 0;
   border-radius: 999px;
@@ -134,15 +132,16 @@
   font: inherit;
 }
 
-.primaryButton {
-  color: #fff8ef;
-  background: linear-gradient(135deg, var(--brand), var(--brand-strong));
-  box-shadow: 0 14px 30px rgba(140, 63, 16, 0.22);
-}
-
 .secondaryButton {
+  width: 100%;
   color: var(--text);
   background: rgba(235, 218, 198, 0.7);
+}
+
+.autoCalcNote {
+  margin-top: 12px;
+  color: var(--muted);
+  line-height: 1.6;
 }
 
 .copyBlock {
@@ -199,7 +198,7 @@
 
 .infoSection {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
   margin-top: 22px;
 }
